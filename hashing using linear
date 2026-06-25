@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int hash[10],i,key,h;
+
+    for(i=0;i<10;i++)
+        hash[i]=-1;
+
+    int arr[5]={10,20,30,40,50};
+
+    for(i=0;i<5;i++)
+    {
+        key=arr[i];
+        h=key%10;
+
+        while(hash[h]!=-1)
+            h=(h+1)%10;
+
+        hash[h]=key;
+    }
+
+    for(i=0;i<10;i++)
+        printf("%d ",hash[i]);
+
+    return 0;
+}
