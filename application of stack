@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<ctype.h>
+
+int main()
+{
+    char exp[20];
+    scanf("%s",exp);
+
+    printf("Postfix Expression");
+    return 0;
+}
