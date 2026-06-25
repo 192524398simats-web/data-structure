@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+struct node
+{
+    int data;
+    struct node *left,*right;
+};
+
+void inorder(struct node *root)
+{
+    if(root)
+    {
+        inorder(root->left);
+        printf("%d ",root->data);
+        inorder(root->right);
+    }
+}
+
+int main()
+{
+    printf("Inorder Traversal");
+    return 0;
+}
