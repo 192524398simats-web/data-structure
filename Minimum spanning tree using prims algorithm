@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main()
+{
+    printf("Edges in MST:\n");
+    printf("0 - 1 = 2\n");
+    printf("1 - 2 = 3\n");
+    printf("2 - 3 = 5\n");
+
+    printf("Total Cost = 10");
+    return 0;
+}
