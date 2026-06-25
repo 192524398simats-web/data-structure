@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int graph[5][5]={
+    {0,1,1,0,0},
+    {1,0,0,1,1},
+    {1,0,0,0,0},
+    {0,1,0,0,0},
+    {0,1,0,0,0}
+};
+
+int visited[5]={0};
+
+void dfs(int v)
+{
+    int i;
+    visited[v]=1;
+    printf("%d ",v);
+
+    for(i=0;i<5;i++)
+    {
+        if(graph[v][i] && !visited[i])
+            dfs(i);
+    }
+}
+
+int main()
+{
+    dfs(0);
+    return 0;
+}
